@@ -1,0 +1,2072 @@
+<!doctype html>
+<html lang="en" data-layout="horizontal" data-layout-width="fluid" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="enable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>School Reserve</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/Frontend/assets/images/favicon.ico">
+
+    <!-- Sweet Alert css-->
+    <link href="/Frontend/assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Select 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!--datatable css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <!--datatable responsive css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+    <!-- Layout config Js -->
+    <script src="/Frontend/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/Frontend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/Frontend/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/Frontend/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/Frontend/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+    <div class="layout-width">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box horizontal-logo">
+                    <a href="index.html" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="/Frontend/assets/images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/Frontend/assets/images/LOGO.png" alt="" height="150">
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="/Frontend/assets/images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/Frontend/assets/images/LOGO.png" alt="" height="150">
+                        </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger material-shadow-none" id="topnav-hamburger-icon">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <div class="ms-1 header-item d-none d-sm-flex">
+                    <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle" data-toggle="fullscreen">
+                        <i class='bx bx-fullscreen fs-22'></i>
+                    </button>
+                </div>
+
+                <div class="ms-1 header-item d-none d-sm-flex">
+                    <button type="button" class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle light-dark-mode">
+                        <i class='bx bx-moon fs-22'></i>
+                    </button>
+                </div>
+                <div class="dropdown ms-sm-3 header-item topbar-user">
+                    <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                            <!-- <img class="rounded-circle header-profile-user" src="/Frontend/assets/images/users/avatar-1.jpg" alt="Header Avatar"> -->
+                            <span class="text-start ms-xl-2">
+                                <span id="userName-label" class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Anna Adame</span>
+                                <span id="userRole-label" class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">Founder</span>
+                            </span>
+                        </span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="/Frontend/dist/auth-logout-cover.html" onclick="localStorage.removeItem('token'); localStorage.removeItem('userId'); return true;"><i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="/Frontend/assets/images/logo-sm.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/Frontend/assets/images/LOGO.png" alt="" height="150">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="/Frontend/assets/images/logo-sm.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="/Frontend/assets/images/LOGO.png" alt="" height="150">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="../" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboards</span>
+                            </a>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#informasi-ruangan" role="button" aria-expanded="false" aria-controls="sidebarApps">
+                                <i class="ri-apps-2-line"></i> <span data-key="t-apps">Ruangan <i class='bx bx-chevron-down'></i></span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarApps">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                            Sewa
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarEmail">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#addRentRoom" role="button" aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
+                                                        Pengajuan
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#returnRentRoom" role="button" aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
+                                                        Pengembalian
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link"  href="#informasi-inventori" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Inventori <i class='bx bx-chevron-down'></i></span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarApps">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                                            Sewa
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarEmail">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#addRentInventory" role="button" aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
+                                                        Pengajuan
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#returnRentInventory" role="button" aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
+                                                        Pengembalian
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
+                                <h4 class="mb-sm-0">Dashboard</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Room Informasi -->
+                    <div id="informasi-ruangan" class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Informasi Ruangan</h5>
+                                </div>
+                                <div id="table-ruangan_wrapper" class="card-body">
+                                    <table id="table-ruangan" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="width: 10px;">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" id="checkAll" value="option">
+                                                    </div>
+                                                </th>
+                                                <!-- <th data-ordering="false">Check</th> -->
+                                                <th>No.</th>
+                                                <th data-ordering="false">ID</th>
+                                                <th data-ordering="false">Nama</th>
+                                                <th>Kapasitas</th>
+                                                <th>Status</th> <!-- true = disewa false = tersedia -->
+                                                <th>Create Date</th>
+                                                <th>Update Date</th>
+                                                <!-- <th>Action</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>01</td>
+                                                <td>VLZ-453</td>
+                                                <td>Ruang Lab</td>
+                                                <td>50</td>
+                                                <td><span class="badge badge-label bg-primary"><i class="mdi mdi-circle-medium"></i> Disewa</span></td>
+                                                <td>05 Oct, 2021</td>
+                                                <td>06 Oct, 2021</td>
+                                                <!-- <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> -->
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>01</td>
+                                                <td>VLZ-453</td>
+                                                <td>Ruang Lab</td>
+                                                <td>50</td>
+                                                <td><span class="badge badge-label bg-success"><i class="mdi mdi-circle-medium"></i> Tersedia</span></td>
+                                                <td>05 Oct, 2021</td>
+                                                <td>06 Oct, 2021</td>
+                                                <!-- <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+
+                    <!-- Inventori informasi -->
+                    <div id="informasi-inventori" class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Informasi Inventori</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table id="table-inventaris" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
+                                         <thead>
+                                            <tr>
+                                                <th data-ordering="false">ID</th>
+                                                <th scope="col" style="width: 10px;">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" id="checkAll" value="option">
+                                                    </div>
+                                                </th>
+                                                <!-- <th data-ordering="false">Check</th> -->
+                                                <th data-ordering="false">No.</th>
+                                                <th data-ordering="false">Kode Barang</th>
+                                                <th data-ordering="false">Nama Barang</th>
+                                                <th data-ordering="false">Lokasi</th>
+                                                <th data-ordering="false">Qty</th>
+                                                <th>Qty sewa</th>
+                                                <th>Kondisi</th>
+                                                <th>Kategori</th>
+                                                <th>Supplier</th>
+                                                <th>Harga Beli</th>
+                                                <th>Tanggal Pembelian</th>
+                                                <th>Status</th><!-- diliat dari qty-qty sewa : tersedia atau tidak -->
+                                                <th>Create Date</th>
+                                                <th>Update Date</th>
+                                                <!-- <th>Action</th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>KD-BR-01</td>
+                                                <td>VLZ-453</td>
+                                                <td>Sapu</td>
+                                                <td>Ruang A</td>
+                                                <td>5</td>
+                                                <td>1</td>
+                                                <td>Lengkap</td>
+                                                <td>Elektronik</td>
+                                                <td>PT. ABC</td>
+                                                <td>Rp. 100.000</td>
+                                                <td>05 Oct, 2021</td>
+                                                <td><span class="badge badge-label bg-success"><i class="mdi mdi-circle-medium"></i> Tersedia</span></td>
+                                                <td>05 Oct, 2021</td>
+                                                <td>06 Oct, 2021</td>
+                                                <!-- <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> -->
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="option1">
+                                                    </div>
+                                                </th>
+                                                <td>KD-BR-02</td>
+                                                <td>VLZ-453</td>
+                                                <td>Proyektor</td>
+                                                <td>Ruang B</td>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>Lengkap</td>
+                                                <td>Elektronik</td>
+                                                <td>PT. ABC</td>
+                                                <td>Rp. 100.000</td>
+                                                <td>05 Oct, 2021</td>
+                                                <td><span class="badge badge-label bg-warning"><i class="mdi mdi-circle-medium"></i> Tidak tersedia</span></td>
+                                                <td>05 Oct, 2021</td>
+                                                <td>06 Oct, 2021</td>
+                                                <!-- <td>
+                                                    <div class="dropdown d-inline-block">
+                                                        <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ri-more-fill align-middle"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li><a class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                            <li>
+                                                                <a class="dropdown-item remove-item-btn">
+                                                                    <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+
+                    <!-- end page title -->
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © School Reserve.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Themesbrand
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Registrasi -->
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="userModalLabel">Registrasi user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="userModalBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="userModal-form">
+                        <div class="mb-3">
+                            <label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="useremail" name="email" placeholder="Masukkan email address" required>
+                            <div class="invalid-feedback">
+                                Please Masukkan email
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="usernip" class="form-label">NIP <span class="text-danger">*</span></label>
+                            <input type="nip" class="form-control" id="usernip" name="nip" placeholder="Masukkan nip" required>
+                            <div class="invalid-feedback">
+                                Please Masukkan nip
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
+                            <div class="invalid-feedback">
+                                Please Masukkan username
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="password-input">Password</label>
+                            <div class="position-relative auth-pass-inputgroup">
+                                <!-- <input type="password" class="form-control pe-5 password-input" oncopy="return false" onpaste="return false" placeholder="Masukkan password" id="password-input" name="password" aria-describedby="passwordInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> -->
+                                <input type="password" class="form-control pe-5 password-input" oncopy="return false" onpaste="return false" placeholder="Masukkan password" id="password-input" name="password" aria-describedby="passwordInput" required>
+                                <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                <div class="invalid-feedback">
+                                    Please Masukkan password
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="role" name="role">
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="userModal-btn" data-form="userModal-form"><i class="ri-save-line align-bottom me-1"></i> Daftar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--end Modal Registrasi-->
+
+    <!-- Modal Tambah Data Ruangan -->
+    <div class="modal fade" id="addRoom" tabindex="-1" aria-labelledby="addRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="addRoomLabel">Tambah Data Ruangan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addRoomBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="addNewRoom-form">
+                        <input type="hidden" id="addNew-id-room" class="form-control">
+                        <div class="mb-3">
+                            <label for="addNew-name-room" class="form-label">Nama Ruangan</label>
+                            <input type="text" id="addNew-name-room" class="form-control" name="name" placeholder="Masukan Nama Ruangan">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addNew-capacity-room" class="form-label">Kapasitas Ruangan</label>
+                            <input type="number" id="addNew-capacity-room" class="form-control" name="capacity" placeholder="Masukan Kapasitas Ruangan">
+                        </div>
+
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="addNewRoom" data-form="addNewRoom-form"><i class="ri-save-line align-bottom me-1"></i> Tambahkan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Tambah Data Ruangan-->
+
+    <!-- Modal Edit Data Ruangan -->
+    <div class="modal fade" id="editRoom" tabindex="-1" aria-labelledby="addRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="editRoomLabel">Perbarui Data Ruangan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addRoomBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="editNewRoom-form">
+                        <input type="hidden" id="edit-id-room" class="form-control" name="id">
+                        <div class="mb-3">
+                            <label for="edit-name-room" class="form-label">Nama Ruangan</label>
+                            <input type="text" id="edit-name-room" class="form-control" name="name" placeholder="Masukan Nama Ruangan">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-capacity-room" class="form-label">Kapasitas Ruangan</label>
+                            <input type="number" id="edit-capacity-room" class="form-control" name="capacity" placeholder="Masukan Kapasitas Ruangan">
+                        </div>
+
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="updateRoom" data-form="editNewRoom-form"><i class="ri-save-line align-bottom me-1"></i>Perbarui</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Edit Data Ruangan-->
+
+    <!-- Modal Tambah Data Inventaris -->
+    <div class="modal fade" id="addInventory" tabindex="-1" aria-labelledby="addInventoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="addInventoryLabel">Tambah Data Inventaris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addInventoryBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="addNewInventory-form">
+                        <input type="hidden" id="addNew-id-input" class="form-control" name="id">
+                        <div class="mb-3">
+                            <label for="addNew-name-inventory" class="form-label">Nama Barang</label>
+                            <input type="text" id="addNew-name-inventory" class="form-control" name="name" placeholder="Masukan Nama Barang">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addNew-location-inventory" class="form-label">Lokasi Barang</label>
+                            <input type="text" id="addNew-location-inventory" class="form-control" name="location" placeholder="Masukan Lokasi Barang">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addNew-initialQuantity-inventory" class="form-label">Kuantitas Awal</label>
+                            <input type="number" id="addNew-initialQuantity-inventory" class="form-control" name="initialQuantity" placeholder="Masukan Kuantitas Awal">
+                        </div>
+                        <div class="mb-3">
+                            <label for="addNew-condition-inventory" class="form-label">Kondisi</label>
+                            <!-- <select class="form-select" id="addNew-condition-inventory" name="condition">
+                                <option value="">Pilih Kondisi Barang</option>
+                                <option value="baik">Baik</option>
+                                <option value="sedang">Sedang</option>
+                                <option value="buruk">Buruk</option>
+                            </select> -->
+                            <textarea id="addNew-condition-inventory" class="form-control" name="condition" placeholder="Masukan Catatan Barang"></textarea>
+                        </div>
+
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="addNewInventory" data-form="addNewInventory-form"><i class="ri-save-line align-bottom me-1"></i> Tambahkan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Tambah Data Inventaris-->
+
+    <!-- Modal Edit Data Inventaris -->
+    <div class="modal fade" id="editInventory" tabindex="-1" aria-labelledby="addInventoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="editInventoryLabel">Perbarui Data Inventaris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addInventoryBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="editInventory-form">
+                        <input type="hidden" id="edit-id-input" class="form-control" name="id">
+                        <div class="mb-3">
+                            <label for="edit-name-inventory" class="form-label">Nama Barang</label>
+                            <input type="text" id="edit-name-inventory" class="form-control" name="name" placeholder="Masukan Nama Barang">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-location-inventory" class="form-label">Lokasi Barang</label>
+                            <input type="text" id="edit-location-inventory" class="form-control" name="location" placeholder="Masukan Lokasi Barang">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-initialQuantity-inventory" class="form-label">Kuantitas Awal</label>
+                            <input type="number" id="edit-initialQuantity-inventory" class="form-control" name="initialQuantity" placeholder="Masukan Kuantitas Awal">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-condition-inventory" class="form-label">Kondisi</label>
+                            <!-- <select class="form-select" id="edit-condition-inventory" name="condition">
+                                <option value="">Pilih Kondisi Barang</option>
+                                <option value="baik">Baik</option>
+                                <option value="sedang">Sedang</option>
+                                <option value="buruk">Buruk</option>
+                            </select> -->
+                            <textarea id="edit-condition-inventory" class="form-control" name="condition" placeholder="Masukan Catatan Barang"></textarea>
+                        </div>
+
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Tutup</button>
+                            <button type="submit" class="btn btn-primary" id="updateInventory" data-form="editInventory-form"><i class="ri-save-line align-bottom me-1"></i> Perbarui</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Edit Data Inventaris-->
+
+    <!-- Modal Pengajuan Sewa Ruangan -->
+    <div class="modal fade" id="addRentRoom" tabindex="-1" aria-labelledby="addRentRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="addRentRoomLabel">Pengajuan Sewa Ruangan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addRentRoomBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="addRentRoom-form">
+                        <input type="hidden" id="taskid-input" class="form-control">
+                        <div class="mb-3">
+                            <label for="addRent-user-room" class="form-label">Penyewa</label>
+                            <select class="addRent-user-room" id="addRent-user-room" name="userId">
+                                <option value="">Pilih Orang Penyewa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="addRent-room-available" class="form-label">Ruangan Tersedia</label>
+                            <select class="addRent-room-available" id="addRent-room-available" name="roomId">
+                                <option value="">Pilih Ruangan Tersedia</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addRent-capacity-room" class="form-label">Kapasitas</label>
+                                    <input type="number" id="addRent-capacity-room" class="form-control" name="capacity" placeholder="Masukan Kapasitas Ruangan">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addRent-condition-room" class="form-label">Kondisi</label>
+                                    <select class="addRent-condition-room" id="addRent-condition-room" name="condition">
+                                        <option value="" class="text-muted">Pilih Kondisi Ruangan</option>
+                                        <option value="baik">Baik</option>
+                                        <option value="sedang">Sedang</option>
+                                        <option value="buruk">Buruk</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="addRent-notes-room" class="form-label">Catatan</label>
+                            <textarea id="addRent-notes-room" class="form-control" name="notes" placeholder="Masukan Catatan Ruangan"></textarea>
+                        </div>
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Close</button>
+                            <button type="submit" class="btn btn-primary" id="addRentRoom-btn" data-form="addRentRoom-form"><i class="ri-save-line align-bottom me-1"></i> Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Pengajuan Sewa Ruangan-->
+
+    <!-- Modal Pengajuan Sewa Inventaris -->
+    <div class="modal fade" id="addRentInventory" tabindex="-1" aria-labelledby="addRentInventoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="addRentInventoryLabel">Pengajuan Sewa Inventaris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="addRentInventoryBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="addRentInventory-form">
+                        <input type="hidden" id="taskid-input" class="form-control">
+                        <div class="mb-3">
+                            <label for="addRent-user-inventory" class="form-label">Penyewa</label>
+                            <select class="addRent-user-inventory" id="addRent-user-inventory" name="userId">
+                                <option value="">Pilih Orang Penyewa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="addRent-inventory-available" class="form-label">Barang Tersedia</label>
+                            <select class="addRent-inventory-available" id="addRent-inventory-available" name="inventoryId">
+                                <option value="">Pilih Barang Tersedia</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addRent-quantity-inventory" class="form-label">Qty</label>
+                                    <input type="number" id="addRent-quantity-inventory" class="form-control" name="quantity" placeholder="Masukan Jumlah Barang">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addRent-condition-inventory" class="form-label">Kondisi</label>
+                                    <select class="addRent-condition-inventory" id="addRent-condition-inventory" name="condition">
+                                        <option value="" class="text-muted">Pilih Kondisi Barang</option>
+                                        <option value="baik">Baik</option>
+                                        <option value="sedang">Sedang</option>
+                                        <option value="buruk">Buruk</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="addRent-notes-inventory" class="form-label">Catatan</label>
+                            <textarea id="addRent-notes-inventory" class="form-control" name="notes" placeholder="Masukan Catatan Barang"></textarea>
+                        </div>
+
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Close</button>
+                            <button type="submit" class="btn btn-primary" id="addRentInventory-btn" data-form="addRentInventory-form"><i class="ri-save-line align-bottom me-1"></i> Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Pengajuan Sewa Inventaris-->
+
+
+    <!-- Modal Pengembalian Sewa Ruangan -->
+    <div class="modal fade" id="returnRentRoom" tabindex="-1" aria-labelledby="returnRentRoomLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="returnRentRoomLabel">Pengembalian Sewa Ruangan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="returnRentRoomBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="returnRentRoom-form">
+                        <input type="hidden" id="taskid-input" class="form-control">
+                        <div class="mb-3">
+                            <label for="returnRent-user-room" class="form-label">Penyewa</label>
+                            <select class="returnRent-user-room" id="returnRent-user-room" name="userId">
+                                <option value="">Pilih Orang Penyewa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="returnRent-room" class="form-label">Ruangan</label>
+                            <select class="returnRent-room" id="returnRent-room" name="roomId">
+                                <option value="">Pilih Ruangan yang Ingin Dikembalikan</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="returnRent-condition-room" class="form-label">Kondisi</label>
+                                    <select class="returnRent-condition-room" id="returnRent-condition-room" name="condition">
+                                        <option value="" class="text-muted">Pilih Kondisi Ruangan</option>
+                                        <option value="baik">Baik</option>
+                                        <option value="sedang">Sedang</option>
+                                        <option value="buruk">Buruk</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="returnRent-notes-room" class="form-label">Catatan</label>
+                            <textarea id="returnRent-notes-room" class="form-control" name="notes" placeholder="Masukan Catatan Ruangan"></textarea>
+                        </div>
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Close</button>
+                            <button type="submit" class="btn btn-primary" id="returnRentRoom-btn" data-form="returnRentRoom-form"><i class="ri-save-line align-bottom me-1"></i> Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Pengembalian Sewa Ruangan-->
+
+
+    <!-- Modal Pengembalian Sewa Inventaris -->
+    <div class="modal fade" id="returnRentInventory" tabindex="-1" aria-labelledby="returnRentinventoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header p-3 bg-success-subtle">
+                    <h5 class="modal-title" id="returnRentinventoryLabel">Pengembalian Sewa Inventaris</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="returnRentinventoryBtn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="task-error-msg" class="alert alert-danger py-2"></div>
+                    <form autocomplete="off" action="" id="returnRentInventory-form">
+                        <input type="hidden" id="taskid-input" class="form-control">
+                        <div class="mb-3">
+                            <label for="returnRent-user-inventory" class="form-label">Penyewa</label>
+                            <select class="returnRent-user-inventory" id="returnRent-user-inventory" name="userId">
+                                <option value="">Pilih Orang Penyewa</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="returnRent-inventory" class="form-label">Barang Tersedia</label>
+                            <select class="returnRent-inventory" id="returnRent-inventory" name="inventoryId">
+                                <option value="">Pilih Barang yang Ingin Dikembalikan</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                    <label for="returnRent-quantity-inventory" class="form-label">Qty</label>
+                                    <input type="number" id="returnRent-quantity-inventory" class="form-control" name="quantity" placeholder="Masukan Jumlah Barang">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="returnRent-condition-inventory" class="form-label">Kondisi</label>
+                                    <select class="returnRent-condition-inventory" id="returnRent-condition-inventory" name="condition">
+                                        <option value="" class="text-muted">Pilih Kondisi Ruangan</option>
+                                        <option value="baik">Baik</option>
+                                        <option value="sedang">Sedang</option>
+                                        <option value="buruk">Buruk</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="returnRent-notes-inventory" class="form-label">Catatan</label>
+                            <textarea id="returnRent-notes-inventory" class="form-control" name="notes" placeholder="Masukan Catatan Ruangan"></textarea>
+                        </div>
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-ghost-success" data-bs-dismiss="modal"><i class="ri-close-fill align-bottom"></i> Close</button>
+                            <button type="submit" class="btn btn-primary" id="returnRentInventory-btn" data-form="returnRentInventory-form"><i class="ri-save-line align-bottom me-1"></i>Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal Pengajuan Sewa Inventaris-->
+
+    <!-- Animasi Loading -->
+    <div id="loadingOverlay" class="overlay d-none">
+        <div class="spinner-border" role="status" style="color: #1c0c41">
+                <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="/Frontend/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Frontend/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/Frontend/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/Frontend/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/Frontend/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/Frontend/assets/js/plugins.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/Frontend/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Dashboard init -->
+    <script src="/Frontend/assets/js/pages/dashboard-ecommerce.init.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--datatable js-->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <script src="/Frontend/assets/js/pages/datatables.init.js"></script>
+
+    <!-- apexcharts -->
+    <script src="/Frontend/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- mixed charts init -->
+    <script src="/Frontend/assets/js/pages/apexcharts-mixed.init.js"></script>
+
+    <!--select2 cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="/Frontend/assets/js/pages/select2.init.js"></script>
+
+        <!-- Sweet Alerts js -->
+    <script src="/Frontend/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="/Frontend/assets/js/pages/sweetalerts.init.js"></script>
+
+    <!-- validation init -->
+    <script src="/Frontend/assets/js/pages/form-validation.init.js"></script>
+    <!-- password create init -->
+    <script src="/Frontend/assets/js/pages/passowrd-create.init.js"></script>
+
+    <!-- App js -->
+    <script src="/Frontend/assets/js/app.js"></script>
+
+    <!-- init datatable -->
+    <script>
+        $(document).ready(function () {
+            $('#table-ruangan').DataTable();
+            $('#table-inventaris').DataTable();
+        });
+    </script>
+
+    <!-- init select 2 -->
+    <script>
+        $('.addRent-user-room').select2({
+            placeholder: "Pilih Pengguna Penyewa",
+            allowClear: true,
+            dropdownParent: $("#addRentRoom"),
+            width: '100%'
+        });
+
+        $('.addRent-room-available').select2({
+            placeholder: "Pilih Ruangan Yang Tersedia",
+            // allowClear: true,
+            dropdownParent: $("#addRentRoom"),
+            width: '100%',
+        });
+
+        $('.addRent-inventory-available').select2({
+            placeholder: "Pilih Barang Yang Tersedia",
+            // allowClear: true,
+            dropdownParent: $("#addRentInventory"),
+            width: '100%',
+        });
+
+        $('.addRent-user-inventory').select2({
+            placeholder: "Pilih Pengguna Penyewa",
+            allowClear: true,
+            dropdownParent: $("#addRentInventory"),
+            width: '100%'
+        });
+
+        $('.returnRent-user-room').select2({
+            placeholder: "Pilih Pengguna Penyewa",
+            allowClear: true,
+            dropdownParent: $("#returnRentRoom"),
+            width: '100%'
+        });
+
+        $('.returnRent-user-inventory').select2({
+            placeholder: "Pilih Pengguna Penyewa",
+            allowClear: true,
+            dropdownParent: $("#returnRentInventory"),
+            width: '100%'
+        });
+
+        $('.addRent-condition-room').select2({
+            placeholder: "Pilih Kondisi Ruangan",
+            allowClear: true,
+            dropdownParent: $("#addRentRoom"),
+            width: '100%',
+            minimumResultsForSearch: -1
+        });
+        $('.returnRent-room').select2({
+            placeholder: "Pilih Ruangan Yang Ingin Dikembalikan",
+            allowClear: true,
+            dropdownParent: $("#returnRentRoom"),
+            width: '100%',
+            minimumResultsForSearch: -1
+        });
+        $('.returnRent-inventory').select2({
+            placeholder: "Pilih Barang Yang Ingin Dikembalikan",
+            allowClear: true,
+            dropdownParent: $("#returnRentInventory"),
+            width: '100%',
+            minimumResultsForSearch: -1
+        });
+
+        $('.returnRent-condition-room').select2({
+            placeholder: "Pilih kondisi Ruangan",
+            allowClear: true,
+            dropdownParent: $("#returnRentRoom"),
+            width: '100%'
+        });
+
+        $('.addRent-condition-inventory').select2({
+            placeholder: "Pilih Kondisi Barang",
+            allowClear: true,
+            dropdownParent: $("#addRentInventory"),
+            width: '100%',
+            minimumResultsForSearch: -1
+        });
+
+        $('.returnRent-condition-inventory').select2({
+            placeholder: "Pilih kondisi Barang",
+            allowClear: true,
+            dropdownParent: $("#returnRentInventory"),
+            width: '100%'
+        });
+    </script>
+
+    <!-- Alert Success dan Error -->
+    <script>
+        // Fungsi untuk menampilkan modal sukses
+        function showSuccessAlert(message) {
+            setTimeout(() => {
+                $("#loadingOverlay").addClass("d-none");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: message,
+                    showConfirmButton: false,
+                    timer: 2500
+                }).then(() => {
+                    window.location.reload();
+                });
+            }, 1500);
+        }
+
+        // Fungsi untuk menampilkan modal error
+        function showErrorAlert(message) {
+            setTimeout(() => {
+                $("#loadingOverlay").addClass("d-none");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: message,
+                    showConfirmButton: true
+                });
+            }, 1500);
+        }
+
+        // sweet alert remove item confirm
+        $(document).on('click', '.remove-room-btn', function() {
+            const roomId = $(this).data('id'); // Ambil ID ruangan yang ingin dihapus
+            console.log("ID: ", roomId);
+            Swal.fire({
+                html:'<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon><div class="mt-4 pt-2 fs-15 mx-5"><h4>Kamu Yakin ?</h4><p class="text-muted mx-4 mb-0">Untuk Menghapus Ruangan ini ?</p></div></div>',
+                showCancelButton: true,
+                customClass:{
+                    confirmButton:"btn btn-primary w-xs me-2 mb-1",
+                    cancelButton:"btn btn-danger w-xs mb-1"
+                },
+                confirmButtonText:"Yes, Delete It!",
+                buttonsStyling: false,
+                showCloseButton: true,
+                preConfirm: () => {
+                    return new Promise((resolve) => {
+                        resolve(roomId); // Kirimkan roomId sebagai hasil dari preConfirm
+                    });
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteRoom(result.value);
+                }
+            });
+        });
+
+
+        
+        $(document).on('click', '.remove-item-btn', function() {
+            const itemId = $(this).data('id'); // Ambil ID item yang ingin dihapus
+            console.log("ID: ", itemId);
+            Swal.fire({
+                html:'<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon><div class="mt-4 pt-2 fs-15 mx-5"><h4>Kamu Yakin ?</h4><p class="text-muted mx-4 mb-0">Untuk Menghapus Item ini ?</p></div></div>',
+                showCancelButton: true,
+                customClass:{
+                    confirmButton:"btn btn-primary w-xs me-2 mb-1",
+                    cancelButton:"btn btn-danger w-xs mb-1"
+                },
+                confirmButtonText:"Yes, Delete It!",
+                buttonsStyling: false,
+                showCloseButton: true,
+                preConfirm: () => {
+                    return new Promise((resolve) => {
+                        resolve(itemId); // Kirimkan itemId sebagai hasil dari preConfirm
+                    });
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteItem(result.value);
+                }
+            });
+        });
+
+        // fungsi untuk mengubah IDR
+        function formatIDR(amount) {
+            return `Rp ${amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+        }
+
+    </script>
+
+    <!-- // Contoh fungsi untuk menggunakan token dalam permintaan lainnya -->
+        <script>
+        // Contoh fungsi untuk menggunakan token dalam permintaan lainnya
+            function fetchWithToken(url, options = {}) {
+                var token = localStorage.getItem('token');
+                if (!token) {
+                    // throw new Error('No token found');
+                    // redirect ke halaman login
+                    window.location.href = '../Frontend/dist/auth-signin-cover.html';
+                }
+
+                return $.ajax({
+                    url: url,
+                    type: options.type || 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
+                    contentType: options.contentType || 'application/json',
+                    data: options.data || null,
+                    success: function(data) {
+                        if (data.success === false && data.message === 'Token has expired.') {
+                            Swal.fire({
+                                html: '<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f06548,secondary:#f7b84b" style="width:120px;height:120px"></lord-icon><div class="mt-4 pt-2 fs-15"><h4>Token Expired</h4><p class="text-muted mx-4 mb-0">Your session has expired. Please log in again.</p></div></div>',
+                                showCancelButton: true,
+                                showConfirmButton: false,
+                                customClass: {
+                                    cancelButton: "btn btn-primary w-xs mb-1"
+                                },
+                                cancelButtonText: "Dismiss",
+                                buttonsStyling: false,
+                                showCloseButton: true
+                            }).then(() => {
+                                window.location.href = '../Frontend/dist/auth-logout-cover.html';
+                            });
+                        } else {
+                            if (options.success) options.success(data);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.responseJSON && xhr.responseJSON.message === 'Token has expired.') {
+                            Swal.fire({
+                                html: '<div class="mt-3"><lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="loop" colors="primary:#f06548,secondary:#f7b84b" style="width:120px;height:120px"></lord-icon><div class="mt-4 pt-2 fs-15"><h4>Token Expired</h4><p class="text-muted mx-4 mb-0">Your session has expired. Please log in again.</p></div></div>',
+                                showCancelButton: true,
+                                showConfirmButton: false,
+                                customClass: {
+                                    cancelButton: "btn btn-primary w-xs mb-1"
+                                },
+                                cancelButtonText: "Dismiss",
+                                buttonsStyling: false,
+                                showCloseButton: true
+                            }).then(() => {
+                                window.location.href = '../Frontend/dist/auth-logout-cover.html';
+                            });
+                        } else {
+                            if (options.error) options.error(xhr, status, error);
+                        }
+                    }
+                });
+            }
+        </script>
+
+    <!-- Url Api -->
+     <script>
+        const url = 'http://localhost:3000/api'; //dev
+        // const url = 'http://localhost:3000/api/'; //prod
+     </script>
+    <!-- Get Data Card -->
+    <script>
+        $(document).ready(function() {
+            // var token = localStorage.getItem('token');
+            // console.log('Token:', token);
+            getUserWithId();
+            // get User with Id
+            function getUserWithId() {
+                let userId = localStorage.getItem('userId');
+                // console.log('User Id:', userId);
+                fetchWithToken(`${url}/users/${userId}`)
+                    .then(response => {
+                        const user = response; // Data yang diambil dari server
+                        // console.log('Data User:', user);
+                        $('#userName-label').text(user.username);
+                        $('#userName-labelDrop').text("Welcome, " + user.username);
+                        $('#userRole-label').text(user.role);
+                        const userCount = $('#user-count').find('.counter-value');
+                        const userSelect2 = $('[name="userId"]');
+                        userCount.attr('data-target', user.length);
+
+                        userSelect2.append(`<option value="${user.userId}">${user.nip}-${user.username}</option>`);
+                        
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    })
+            }
+
+            // <!-- Get All User-->
+            // fetchWithToken(`${url}/users`)
+            //     .then(response => {
+            //         // console.log('Data User Rented:', response);
+            //         // console.log('Data User Rented Length:', response.length);
+            //         // const users = response;
+            //         // const userCount = $('#user-count').find('.counter-value');
+            //         // const userSelect2 = $('[name="userId"]');
+            //         // userCount.attr('data-target', users.length);
+
+            //         // users.forEach(user => {
+            //         //     userSelect2.append(`<option value="${user.userId}">${user.nip}-${user.username}</option>`);
+            //         // });
+            //     })
+            //     .catch(error => {
+            //         console.error('Error:', error);
+            //     });
+
+
+            // <!-- Get All Room-->
+            fetchWithToken(`${url}/rooms/all`)
+                .then(response => {
+                    const rooms = response; // Data yang diambil dari server
+                    // console.log('Data Room:', rooms);
+                    const roomsCount = $('#rooms-count').find('.counter-value');
+                    
+                    roomsCount.attr('data-target', rooms.length);
+                    // roomSelect2.empty();
+
+                    // Clear the table body
+                    $('#table-ruangan').DataTable().clear().destroy();
+
+                // Map the data to table rows
+                    const rows = rooms.map((room, index) => {
+                        return [
+                            `<div class="form-check">
+                                <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="${room.id}">
+                            </div>`,
+                            index + 1,
+                            room.id,
+                            room.name,
+                            room.capacity,
+                            room.isRented ? `<span class="badge badge-label bg-primary"><i class="mdi mdi-circle-medium"></i> Disewa</span>` : `<span class="badge badge-label bg-success"><i class="mdi mdi-circle-medium"></i> Tersedia</span>`,
+                            new Date(room.createdAt).toLocaleDateString(),
+                            new Date(room.updatedAt).toLocaleDateString(),
+                            // `<div class="dropdown d-inline-block">
+                            //     <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            //         <i class="ri-more-fill align-middle"></i>
+                            //     </button>
+                            //     <ul class="dropdown-menu dropdown-menu-end">
+                            //         <li><a class="dropdown-item edit-room-btn" data-id="${room.id}"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                            //         <li><a class="dropdown-item remove-room-btn" data-id="${room.id}"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete</a></li>
+                            //     </ul>
+                            // </div>`
+                        ];
+                    });
+
+                    // Initialize DataTable
+                    $('#table-ruangan').DataTable({
+                        data: rows,
+                        columns: [
+                            { title: '<div class="form-check"><input class="form-check-input fs-15" type="checkbox" id="checkAll" disabled></div>', orderable: false }, // Checkbox header
+                            { title: 'No.' },
+                            { title: 'ID', visible: false }, // Hidden column
+                            { title: 'Nama' },
+                            { title: 'Kapasitas' },
+                            { title: 'Status' },
+                            { title: 'Create Date' },
+                            { title: 'Update Date' },
+                            // { title: 'Action' }
+                        ],
+                        responsive: true
+                    });
+
+                    // Event listener for the "select all" checkbox
+                    $('#checkAll').on('click', function() {
+                        let isChecked = $(this).is(':checked');
+                        $('#table-ruangan').find('tbody input[type="checkbox"]').prop('checked', isChecked);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // <!-- Get All Available Rent Room-->
+            fetchWithToken(`${url}/rooms`)
+                .then(response => {
+                    const rooms = response.data; // Data yang diambil dari server
+                    // console.log('Data Room:', rooms);
+                    const roomSelect2 = $('select[id="addRent-room-available"]');                   
+                    // roomSelect2.empty();
+
+                    rooms.forEach(room => {
+                        roomSelect2.append(`<option value="${room.id}">${room.name} (max.${room.capacity} orang)</option>`);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // <!-- Get All Available Rent inventory-->
+            fetchWithToken(`${url}/inventories`)
+                .then(response => {
+                    const inventories = response.data; // Data yang diambil dari server
+                    // console.log('Data inventory:', inventories);
+                    const inventorySelect2 = $('select[id="addRent-inventory-available"]');                   
+                    // inventorySelect2.empty();
+
+                    inventories.forEach(inventory => {
+                        inventorySelect2.append(`<option value="${inventory.id}">${inventory.name} (tersedia.${inventory.initialQuantity-inventory.rentedQuantity} barang)-(Lokasi.${inventory.location})</option>`);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // <!-- Get All Room isRented-->
+            fetchWithToken(`${url}/rooms/all/rent`)
+                .then(response => {
+                    const rooms = response.data; // Data yang diambil dari server
+                    // console.log('Data Room Rented:', rooms);
+                    // console.log('Data Room Rented Length:', rooms.length);
+                    const roomsSelect2 = $('select[id="returnRent-room"]');
+
+                    const bookingsRoomsCount = $('#bookings-rooms-count').find('.counter-value');
+                    bookingsRoomsCount.text(rooms.length);
+                    bookingsRoomsCount.attr('data-target', rooms.length);
+                    rooms.forEach(room => {
+                        let userInfo = room.RoomRents.length > 0 
+                            ? `Disewa oleh: ${room.RoomRents[0].user.username} (NIP: ${room.RoomRents[0].user.nip})`
+                            : "Belum disewa";
+                        
+                        roomsSelect2.append(`<option value="${room.id}">${room.name} - ${userInfo}</option>`);
+                    });
+
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // <!-- Get All Inventories-->
+            fetchWithToken(`${url}/inventories/all`)
+                .then(response => {
+                    const inventories = response; // Data yang diambil dari server
+                    // console.log('Data Inventory:', response);
+                    // console.log('Data length:', response.length);
+                    const inventoriesCount = $('#inventories-count').find('.counter-value');
+                    inventoriesCount.attr('data-target', inventories.length);
+
+                    // Clear the table body and destroy any existing DataTable instance
+                    const table = $('#table-inventaris').DataTable();
+                    table.clear().destroy();
+                    $('#table-inventaris thead').empty();
+                    $('#table-inventaris tbody').empty();
+
+                    // Map the data to table rows
+                    const rows = inventories.map((inventory, index) => {
+                        const isAvailable = (inventory.initialQuantity - inventory.rentedQuantity) > 0;
+                        return [
+                            inventory.id,
+                            `<div class="form-check">
+                                <input class="form-check-input fs-15" type="checkbox" name="checkAll" value="${inventory.id}">
+                            </div>`,
+                            index + 1,
+                            inventory.itemCode, // Menambahkan itemCode
+                            inventory.name,
+                            inventory.location,
+                            inventory.initialQuantity,
+                            inventory.rentedQuantity,
+                            inventory.condition,
+                            inventory.category, // Menambahkan category
+                            inventory.supplier, // Menambahkan supplier
+                            formatIDR(inventory.purchasePrice), // Menambahkan purchasePrice
+                            new Date(inventory.purchaseDate).toLocaleDateString(), // Menambahkan purchaseDate
+                            isAvailable ? 
+                                `<span class="badge badge-label bg-success"><i class="mdi mdi-circle-medium"></i> Tersedia</span>` :
+                                `<span class="badge badge-label bg-warning"><i class="mdi mdi-circle-medium"></i> Tidak tersedia</span>`,
+                            new Date(inventory.createdAt).toLocaleDateString(),
+                            new Date(inventory.updatedAt).toLocaleDateString(),
+                            // `<div class="dropdown d-inline-block">
+                            //     <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            //         <i class="ri-more-fill align-middle"></i>
+                            //     </button>
+                            //     <ul class="dropdown-menu dropdown-menu-end">
+                            //         <li><a class="dropdown-item edit-item-btn" data-id="${inventory.id}"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                            //         <li><button class="dropdown-item remove-item-btn" data-id="${inventory.id}"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete</button></li>
+                            //     </ul>
+                            // </div>`
+                        ];
+                    });
+
+                    // Initialize DataTable
+                    $('#table-inventaris').DataTable({
+                        data: rows,
+                        columns: [
+                            { title: 'ID', visible: false }, // Hidden column
+                            { title: '<div class="form-check"><input class="form-check-input fs-15" type="checkbox" id="checkAll" disabled></div>', orderable: false }, // Checkbox header
+                            { title: 'No.' },
+                            { title: 'Kode Barang' },
+                            { title: 'Nama Barang' },
+                            { title: 'Lokasi' },
+                            { title: 'Qty' },
+                            { title: 'Qty sewa' },
+                            { title: 'Kondisi' },
+                            { title: 'Kategori' }, // Menambahkan header category
+                            { title: 'Supplier' }, // Menambahkan header supplier
+                            { title: 'Harga Beli' }, // Menambahkan header purchasePrice
+                            { title: 'Tanggal Beli' }, // Menambahkan header purchaseDate
+                            { title: 'Status' },
+                            { title: 'Create Date' },
+                            { title: 'Update Date' },
+                            // { title: 'Action' }
+                        ],
+                        responsive: true
+                    });
+
+                    // Event listener for the "select all" checkbox
+                    $('#checkAll').on('click', function() {
+                        let isChecked = $(this).is(':checked');
+                        $('#table-inventaris').find('tbody input[type="checkbox"]').prop('checked', isChecked);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // <!-- Get All Inventories isRented-->
+              // Mengambil data inventory yang disewa
+            fetchWithToken(`${url}/inventories/all/rent`)
+                .then(response => {
+                    const inventories = response.data; // Data yang diambil dari server
+                    console.log('Data Inventory Rented:', inventories);
+                    const bookingsInventoriesCount = $('#bookings-inventories-count').find('.counter-value');
+                    bookingsInventoriesCount.text(inventories.length);
+                    bookingsInventoriesCount.attr('data-target', inventories.length);
+
+                    const inventorySelect2 = $('select[id="returnRent-inventory"]');
+                    // inventorySelect2.empty(); // Kosongkan pilihan sebelumnya
+
+                    // Menggunakan Map untuk mengelola kombinasi inventoryId dan userId
+                    let inventoryUserMap = new Map();
+
+                    inventories.forEach(inventory => {
+                        inventory.inventoryRents.forEach(rent => {
+                            if (!rent.endTime) { // Hanya hitung yang masih dipinjam
+                                const key = `${inventory.id}-${rent.userId}`;
+
+                                if (inventoryUserMap.has(key)) {
+                                    // Jika sudah ada, tambahkan quantity ke yang ada
+                                    inventoryUserMap.get(key).quantity += rent.quantity;
+                                } else {
+                                    // Jika belum ada, tambahkan data baru
+                                    inventoryUserMap.set(key, {
+                                        inventoryId: inventory.id,
+                                        inventoryName: inventory.name,
+                                        username: rent.user.username,
+                                        nip: rent.user.nip,
+                                        quantity: rent.quantity
+                                    });
+                                }
+                            }
+                        });
+                    });
+
+                    // Iterasi melalui map dan tambahkan ke select2
+                    inventoryUserMap.forEach((value, key) => {
+                        console.log('Value:', value);
+                        console.log('Key:', key);
+                        const { inventoryId, inventoryName, username, nip, quantity } = value;
+                        const userInfo = `Disewa oleh: ${username} (NIP: ${nip}) - Jumlah Dipinjam: ${quantity}`;
+                        inventorySelect2.append(`<option value="${inventoryId}">${inventoryName} - ${userInfo}</option>`);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+    <!-- POST Data -->
+     <script>
+        function CollectionsInputs(formId) {
+            const formData = new FormData();
+            const form = $(`#${formId}`);
+
+            form.find('input[name], select[name], textarea[name]').each(function() {
+                if (!$(this).is(':file') && !$(this).is(':radio') && !$(this).is(':checkbox')) {
+                    formData.append($(this).attr('name'), $(this).val());
+                }
+                if ($(this).is(':radio') && $(this).is(':checked')) {
+                    formData.append($(this).attr('name'), $(this).val());
+                }
+                if ($(this).is(':checkbox')) {
+                    $(`input[name="${$(this).attr('name')}"]:checked`).each(function() {
+                        formData.append($(this).attr('name'), $(this).val());
+                    });
+                }
+            });
+
+            // Debugging: Print FormData contents
+            for (let [key, value] of formData.entries()) {
+                console.log(key, value);
+            }
+
+            // Convert FormData to a plain object
+            const formDataObj = {};
+            formData.forEach((value, key) => {
+                formDataObj[key] = value;
+            });
+
+            // Konversi nilai menjadi integer jika ada
+            if (formDataObj.capacity) {
+                formDataObj.capacity = parseInt(formDataObj.capacity, 10);
+            }
+            if (formDataObj.initialQuantity) {
+                formDataObj.initialQuantity = parseInt(formDataObj.initialQuantity, 10);
+            }
+            if (formDataObj.quantity) {
+                formDataObj.quantity = parseInt(formDataObj.quantity, 10);
+            }
+            if (formDataObj.userId) {
+                formDataObj.userId = parseInt(formDataObj.userId, 10);
+            }
+
+            return formDataObj;
+        }
+
+        // register user
+        // Function to set role and show modal
+        function showModal(role) {
+            $('#role').val(role);
+            $('#userModalLabel').text(`Register ${role}`);
+            $('#userModal').modal('show');
+        }
+        // function initializeEventListeners() {
+            // Menghapus event listener sebelumnya jika ada
+            // $('#addNewRoom').off('click');
+            // $('#addNewInventory').off('click');
+            // $(document).off('click', '#updateInventory');
+            // $(document).off('click', '#updateRoom');
+
+            // Register User guru
+            $('#teacher-btn').on('click', function(event) {
+                showModal('guru');
+            })
+            
+            // Register User murid
+            $('#student-btn').on('click', function(event) {
+                showModal('murid');
+            })
+
+
+            $('#userModal-btn').on('click', function(event) {
+                handleFormSubmit(event, 'userModal-form', 'POST', 'User Berhasil didaftarkan!', 'Gagal mendaftarkan user: ');
+            });
+        // }
+
+        function handleFormSubmit(event, formId, method, successMessage, errorMessage) {
+            console.log('Form Submitted');
+            event.preventDefault();
+            const role = $('#role').val();
+            let link;
+            // Determine URL based on role
+            switch (role) {
+                case 'guru':
+                    link = `${url}/users/register/teacher`;
+                    break;
+                case 'murid':
+                    link = `${url}/users/register`;
+                    break;
+                default:
+                    console.error('Unknown role:', role);
+                    return;
+            }
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(link, {
+                type: method,
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert(successMessage);
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert(errorMessage + errorData.error);
+                }
+            });
+        }
+
+        // Add New Room
+        $('#addNewRoom').on('click', function(event) {
+            console.log('Form Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/rooms`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Ruangan Berhasil ditambahkan!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menambahkan ruangan: ' + errorData.error);
+                }
+            });
+        });
+
+        // Add New Rent Room
+        $('#addRentRoom-btn').on('click', function(event) {
+            console.log('Form Rent Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/rooms/rent/start/${formData.roomId}`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Ruangan Berhasil disewa!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menyewa ruangan: ' + errorData.error);
+                }
+            });
+        });
+
+        // Add Return Rent Room
+        $('#returnRentRoom-btn').on('click', function(event) {
+            console.log('Form Rent Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/rooms/rent/end/${formData.roomId}`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Ruangan Berhasil dikembalikan!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal mengembalikan ruangan: ' + errorData.error);
+                }
+            });
+        });
+
+        // Add New Inventory
+        $('#addNewInventory').on('click', function(event) {
+            console.log('Form Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/inventories`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Barang Berhasil ditambahkan!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menambahkan inventaris: ' + errorData.error);
+                }
+            });
+        });
+
+        // Add New Rent Inventory
+        $('#addRentInventory-btn').on('click', function(event) {
+            console.log('Form Rent Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/inventories/rent/start/${formData.inventoryId}`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Barang Berhasil disewa!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menyewa inventaris: ' + errorData.error);
+                }
+            });
+        });
+
+        // Add Return Rent Inventory
+        $('#returnRentInventory-btn').on('click', function(event) {
+            console.log('Form Rent Submitted');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/inventories/rent/end/${formData.inventoryId}`, {
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Barang Berhasil dikembalikan!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal mengembalikan Barang: ' + errorData.error);
+                }
+            });
+        });
+
+        // Untuk mengisi data ke modal edit inventaris
+        // Mengisi data ke modal edit inventaris
+        $(document).on('click', '.edit-item-btn', function() {
+            const dataTable = $('#table-inventaris').DataTable();
+            const row = $(this).closest('tr');
+            const rowIndex = dataTable.row(row).index(); // Dapatkan index baris
+            const rowData = dataTable.row(rowIndex).data(); // Dapatkan data baris
+            const id = rowData[2]; // ID berada pada kolom ketiga
+            const name = rowData[3]; // Nama Barang
+            const location = rowData[4]; // Lokasi
+            const initialQuantity = rowData[5]; // Kuantitas Awal
+            const condition = rowData[7]; // Kondisi
+
+            console.log("ID: ", id, "Name: ", name,"Location: ", location,"InitialQuantity: ", initialQuantity,"Condition: ", condition);
+
+            // Set data ke form modal
+            $('#edit-id-input').val(id);
+            $('#edit-name-inventory').val(name);
+            $('#edit-location-inventory').val(location);
+            $('#edit-initialQuantity-inventory').val(initialQuantity);
+            $('#edit-condition-inventory').val(condition);
+            
+            // Tampilkan modal
+            $('#editInventory').modal('show');
+        });
+
+
+        // Mengisi data ke modal edit ruangan
+        $(document).on('click', '.edit-room-btn', function() {
+            const dataTable = $('#table-ruangan').DataTable();
+            const row = $(this).closest('tr');
+            const rowIndex = dataTable.row(row).index(); // Dapatkan index baris
+            const rowData = dataTable.row(rowIndex).data(); // Dapatkan data baris
+
+            const id = rowData[2]; // Data ID dari kolom ketiga (index 2)
+            const name = rowData[3]; // Nama Ruangan dari kolom keempat (index 3)
+            const capacity = rowData[4]; // Kapasitas dari kolom kelima (index 4)
+
+            console.log("ID: ", id, "Name: ", name,"Capacity: ", capacity);
+
+            // Set data ke form modal
+            $('#edit-id-room').val(id);
+            $('#edit-name-room').val(name);
+            $('#edit-capacity-room').val(capacity);
+
+
+            // Tampilkan modal
+            $('#editRoom').modal('show');
+        });
+
+        // Edit Inventory
+        $('#updateInventory').on('click', function(event) {
+            console.log('Form Submitted updateInventory');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/inventories/${formData.id}`, {
+                type: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Inventaris Berhasil diperbarui!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal memperbarui inventaris: ' + errorData.error);
+                }
+            });
+        });
+
+        // Edit Room
+        $('#updateRoom').on('click', function(event) {
+            console.log('Form Submitted updateRoom');
+            event.preventDefault();
+            const formId = $(this).data('form'); // Ambil ID form yang sedang disubmit
+            console.log('Form ID:', formId);
+            const formData = CollectionsInputs(formId);
+            console.log('Form Data:', formData); // Print form data before sending
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/rooms/${formData.id}`, {
+                type: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(data) {
+                    // console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Data Ruangan Berhasil diperbarui!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    // console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal memperbarui data ruangan: ' + errorData.error);
+                }
+            });
+        });
+
+        // delete room 
+        function deleteRoom(ID) {
+            console.log('Form Submitted'); // Tambahkan log untuk debugging
+            event.preventDefault(); // Cegah perilaku default tombol
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/rooms/${ID}`, {
+                type: 'DELETE',
+                contentType: 'application/json',
+                success: function(data) {
+                    // console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Data Ruangan Berhasil dihapus!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    // console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menghapus data ruangan: ' + errorData.error);
+                }
+            });
+        }
+
+        // delete inventory
+        function deleteItem(ID) {
+            console.log('Form Submitted'); // Tambahkan log untuk debugging
+            event.preventDefault(); // Cegah perilaku default tombol
+            $("#loadingOverlay").removeClass("d-none");
+            fetchWithToken(`${url}/inventories/${ID}`, {
+                type: 'DELETE',
+                contentType: 'application/json',
+                success: function(data) {
+                    // console.log('Data:', data);
+                    // Menampilkan pesan sukses
+                    showSuccessAlert('Data Inventaris Berhasil dihapus!');
+                },
+                error: function(xhr, status, error) {
+                    const errorData = xhr.responseJSON ? xhr.responseJSON : "Bad Request";
+                    // console.error('Error:', errorData);
+                    // Menampilkan pesan error
+                    showErrorAlert('Gagal menghapus data inventaris: ' + errorData.error);
+                }
+            });
+        }
+    </script>
+
+<!-- Chart -->
+<script>
+// Function to get colors array from data attributes
+function getChartColorsArray(e) {
+    if (null !== document.getElementById(e)) {
+        var t = "data-colors" + ("-" + document.documentElement.getAttribute("data-theme") ?? ""),
+            t = document.getElementById(e).getAttribute(t) ?? document.getElementById(e).getAttribute("data-colors");
+        if (t) return (t = JSON.parse(t)).map(function (e) {
+            var t = e.replace(" ", "");
+            return -1 === t.indexOf(",") ? getComputedStyle(document.documentElement).getPropertyValue(t) || t : 2 == (e = e.split(",")).length ? "rgba(" + getComputedStyle(document.documentElement).getPropertyValue(e[0]) + "," + e[1] + ")" : t
+        });
+        console.warn("data-colors attributes not found on", e)
+    }
+}
+
+// Function to render chart
+function renderChart(chartId, chartOptions) {
+    var chartColors = getChartColorsArray(chartId);
+    if (chartColors) {
+        chartOptions.colors = chartColors;
+        var chart = new ApexCharts(document.querySelector("#" + chartId), chartOptions);
+        chart.render();
+    }
+}
+
+// Fetch data for rooms and inventories
+Promise.all([
+    fetchWithToken(`${url}/rooms/all`),
+    fetchWithToken(`${url}/inventories/all`),
+])
+.then(([rooms, inventories]) => {
+    // Process rooms and inventories data
+    const roomNames = rooms.map(room => room.name);
+    const roomCounts = rooms.map(room => room.capacity);
+    
+    const inventoryNames = inventories.map(inventory => inventory.name);
+    const inventoryQuantities = inventories.map(inventory => inventory.initialQuantity);
+
+    // Chart options
+    const chartOptions = {
+        series: [
+            { name: "Room Capacities", type: "column", data: roomCounts },
+            { name: "Inventory Quantities", type: "column", data: inventoryQuantities },
+        ],
+        chart: {
+            height: 350,
+            type: "line",
+            stacked: false,
+            toolbar: { show: false }
+        },
+        dataLabels: { enabled: false },
+        stroke: { width: [1, 1] },
+        title: {
+            text: "Rooms and Inventories Data",
+            align: "left",
+            offsetX: 110,
+            style: { fontWeight: 500 }
+        },
+        xaxis: {
+            categories: [...roomNames, ...inventoryNames]
+        },
+        yaxis: [
+            {
+                title: { text: "Capacities / Quantities", style: { fontWeight: 500 } }
+            }
+        ],
+        tooltip: {
+            fixed: {
+                enabled: true,
+                position: "topLeft",
+                offsetY: 30,
+                offsetX: 60
+            }
+        },
+        legend: { horizontalAlign: "left", offsetX: 40 }
+    };
+
+    // Render the chart
+    renderChart("dynamic_chart_id", chartOptions);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+
+</script>
+</body>
+
+</html>

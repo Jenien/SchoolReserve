@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Sign In | School Reserve</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/Frontend/assets/images/favicon.ico">
+
+    <!-- Layout config Js -->
+    <script src="/Frontend/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="/Frontend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="/Frontend/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="/Frontend/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="/Frontend/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- auth-page wrapper -->
+    <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
+        <div class="bg-overlay"></div>
+        <!-- auth-page content -->
+        <div class="auth-page-content overflow-hidden pt-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card overflow-hidden card-bg-fill galaxy-border-none">
+                            <div class="row g-0">
+                                <div class="col-lg-6">
+                                    <div class="p-lg-5 p-4 auth-one-bg h-100">
+                                        <div class="bg-overlay"></div>
+                                        <div class="position-relative h-100 d-flex flex-column">
+                                            <div class="mb-4">
+                                                <a href="index.html" class="d-block">
+                                                    <!-- <img src="/Frontend/assets/images/LOGO.png" alt="" height="150"> -->
+                                                </a>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <div class="mb-3">
+                                                    <i class="ri-double-quotes-l display-4 text-success"></i>
+                                                </div>
+
+                                                <div id="qoutescarouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                                                    <div class="carousel-indicators">
+                                                        <button type="button" data-bs-target="#qoutescarouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                        <button type="button" data-bs-target="#qoutescarouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                        <button type="button" data-bs-target="#qoutescarouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    </div>
+                                                    <div class="carousel-inner text-center text-white-50 pb-5">
+                                                        <div class="carousel-item active">
+                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <p class="fs-15 fst-italic">" The theme is really great with an amazing customer support."</p>
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <p class="fs-15 fst-italic">" Great! Clean code, clean design, easy for customization. Thanks very much! "</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end carousel -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-lg-6">
+                                    <div class="p-lg-5 p-4">
+                                        <!-- Success Alert -->
+                                        <div id="success-alert" class="alert alert-success alert-border-left alert-dismissible fade show material-shadow d-none" role="alert">
+                                            <i class="ri-check-double-line me-3 align-middle"></i> <strong>Berhasil</strong> - Login berhasil
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        <!-- Error Alert -->
+                                        <div id="error-alert" class="alert alert-danger alert-border-left alert-dismissible fade show material-shadow d-none" role="alert">
+                                            <i class="ri-error-warning-line me-3 align-middle"></i> <strong>Danger</strong> - <span id="error-message"></span>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-primary">Welcome Back !</h5>
+                                            <p class="text-muted">Sign in to continue to School Reserve.</p>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <form id="login-form">
+                                                <div class="mb-3">
+                                                    <label for="username" class="form-label">Username</label>
+                                                    <input type="text" class="form-control" id="username" placeholder="Silahkan masukkan username, email atau nip anda" required>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="password-input">Password</label>
+                                                    <div class="position-relative auth-pass-inputgroup mb-3">
+                                                        <input type="password" class="form-control pe-5 password-input" placeholder="Enter password" id="password-input" required>
+                                                        <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon material-shadow-none" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="auth-remember-check">
+                                                    <label class="form-check-label" for="auth-remember-check">Remember me</label>
+                                                </div>
+
+                                                <div class="mt-4">
+                                                    <button class="btn btn-success w-100" type="submit">Masuk</button>
+                                                </div>
+
+                                                <!-- <div class="mt-4 text-center">
+                                                    <div class="signin-other-title">
+                                                        <h5 class="fs-13 mb-4 title">Sign In with</h5>
+                                                    </div>
+
+                                                    <div>
+                                                        <button type="button" class="btn btn-primary btn-icon waves-effect waves-light"><i class="ri-facebook-fill fs-16"></i></button>
+                                                        <button type="button" class="btn btn-danger btn-icon waves-effect waves-light"><i class="ri-google-fill fs-16"></i></button>
+                                                        <button type="button" class="btn btn-dark btn-icon waves-effect waves-light"><i class="ri-github-fill fs-16"></i></button>
+                                                        <button type="button" class="btn btn-info btn-icon waves-effect waves-light"><i class="ri-twitter-fill fs-16"></i></button>
+                                                    </div>
+                                                </div> -->
+                                            </form>
+                                        </div>
+
+                                        <div class="mt-5 text-center">
+                                            <p class="mb-0">Don't have an account ? <a href="auth-signup-cover.html" class="fw-semibold text-primary text-decoration-underline"> Signup</a> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- end col -->
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end auth page content -->
+
+        <!-- footer -->
+        <footer class="footer galaxy-border-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <p class="mb-0">&copy;
+                                <script>document.write(new Date().getFullYear())</script> School Reserve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+    </div>
+    <!-- end auth-page-wrapper -->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animasi Loading -->
+    <div id="loadingOverlay" class="overlay d-none">
+        <div class="spinner-border" role="status" style="color: #1c0c41">
+                <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    
+    <!-- JAVASCRIPT -->
+    <script src="/Frontend/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Frontend/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/Frontend/assets/libs/node-waves/waves.min.js"></script>
+    <script src="/Frontend/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="/Frontend/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="/Frontend/assets/js/plugins.js"></script>
+
+    <!-- password-addon init -->
+    <script src="/Frontend/assets/js/pages/password-addon.init.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#login-form').on('submit', function(event) {
+                event.preventDefault();
+                var input = $('#username').val();
+                var password = $('#password-input').val();
+
+                // console.log("Username:", username);
+                // console.log("Password:", password);
+
+                // Regex patterns
+                var nipPattern = /^\d+$/; // Hanya angka
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Format email
+                var usernamePattern = /^[a-zA-Z0-9_]{3,}$/; // Alphanumeric characters dengan panjang minimal 3
+
+                var data = {};
+
+                if (nipPattern.test(input)) {
+                    data.nip = input;
+                } else if (emailPattern.test(input)) {
+                    data.email = input;
+                } else if (usernamePattern.test(input)) {
+                    data.username = input;
+                } else {
+                    console.log('Input tidak valid');
+                    return; // Hentikan pengiriman jika input tidak valid
+                }
+
+                data.password = password;
+                // Menampilkan animasi loading
+                $("#loadingOverlay").removeClass("d-none");
+                $.ajax({
+                    url: 'http://localhost:3000/api/users/login',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(data) {
+                        if (data.success) {
+                            // Simpan token dalam local storage
+                            localStorage.setItem('token', data.data.token);
+                            localStorage.setItem('userId', data.data.profile.userId);
+                            // console.log("Token:", data.data.token);
+                            // console.log("Token local:", localStorage.getItem('token'));
+                            // Redirect atau lakukan tindakan lain
+                            if (data.data.profile.role=='admin') {
+                                setTimeout(function() {
+                                    $("#loadingOverlay").addClass("d-none");
+                                    $('#success-alert').removeClass('d-none');
+                                    setTimeout(function() {
+                                        window.location.href = '../index.html';
+                                        // console.log("Login Berhasil admin - ", data.data.profile.role);
+                                    }, 1500); // 1,5 detik
+                                }, 1000); // 1 detik
+                            } else{
+                                setTimeout(function() {
+                                    $("#loadingOverlay").addClass("d-none");
+                                    $('#success-alert').removeClass('d-none');
+                                    setTimeout(function() {
+                                        window.location.href = '../dashboard-user.html';
+                                        // console.log("Login Berhasil user - =  - ", data.data.profile.role);
+                                    }, 1500); // 1,5 detik
+                                }, 1000); // 1 detik
+                            }
+                            
+                        } else {
+                            // Tampilkan pesan error
+                            // console.error('Error 1:', data.message);
+                            $("#loadingOverlay").addClass("d-none");
+                            $('#error-alert').removeClass('d-none');
+                            $('#error-message').text(data.message);
+                            // alert('Login failed: ' + data.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // console.error('Error 2:', error);
+                        const errorData = xhr.responseJSON ? xhr.responseJSON : "Login failed. Please try again later.";
+                        console.error("Login error:", errorData);
+                        console.error("Data dari server (error):", errorData);
+
+                        setTimeout(function() {
+                            $("#loadingOverlay").addClass("d-none");
+                            $('#error-alert').removeClass('d-none');
+                            $('#error-message').text(errorData.message);
+                        }, 2000); // 2 detik
+                    }
+                });
+            });
+
+            // Contoh fungsi untuk menggunakan token dalam permintaan lainnya
+            function fetchWithToken(url, options = {}) {
+                var token = localStorage.getItem('token');
+                if (!token) {
+                    throw new Error('No token found');
+                }
+
+                return $.ajax({
+                    url: url,
+                    type: options.type || 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
+                    contentType: options.contentType || 'application/json',
+                    data: options.data || null,
+                    success: options.success || function(data) { console.log(data); },
+                    error: options.error || function(xhr, status, error) { console.error(error); }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

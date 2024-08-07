@@ -1,0 +1,36 @@
+{
+  "name": "TA",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "prisma generate && next build",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.16.2",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "connect-pg-simple": "^9.0.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "googleapis": "^140.0.1",
+    "imagekit": "^5.0.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "otp-generator": "^4.0.1",
+    "prisma": "^5.16.2",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.4.5"
+  }
+}

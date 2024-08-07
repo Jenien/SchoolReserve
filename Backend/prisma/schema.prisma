@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId       Int         @id @default(autoincrement())
+  username     String
+  email        String      @unique
+  nip          String      @unique
+  password     String
+  role         Role
+  rooms        RoomRent[]
+  inventories  InventoryRent[]
+  deletedAt    DateTime?
+  createdAt    DateTime    @default(now())
+  updatedAt DateTime @updatedAt @default(now())
+
+}
+
+model Room {
+  id           Int         @id @default(autoincrement())
+  name         String
+  capacity     Int
+  isRented     Boolean     @default(false)
+  RoomRents    RoomRent[]
+  deletedAt    DateTime?
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+}
+
+model RoomRent {
+  id                Int             @id @default(autoincrement())
+  RoomId            Int
+  Room              Room            @relation(fields: [RoomId], references: [id])
+  userId            Int
+  user              User            @relation(fields: [userId], references: [userId])
+  capacity          Int
+  startTime         DateTime
+  endTime           DateTime?
+  condition         String
+  notes             String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt @default(now())
+}
+
+model Inventory {
+  id                Int             @id @default(autoincrement())
+  itemCode          String          @unique
+  name              String
+  location          String
+  initialQuantity   Int             @default(0)
+  rentedQuantity    Int             @default(0)
+  condition         String
+  category          String?
+  supplier          String?
+  purchasePrice     Float?
+  purchaseDate      DateTime?
+  inventoryRents    InventoryRent[]
+  deletedAt         DateTime?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+}
+
+model InventoryRent {
+  id                Int             @id @default(autoincrement())
+  inventoryId       Int
+  inventory         Inventory       @relation(fields: [inventoryId], references: [id])
+  userId            Int
+  user              User            @relation(fields: [userId], references: [userId])
+  quantity          Int
+  startTime         DateTime
+  endTime           DateTime?
+  condition         String
+  notes             String?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt @default(now())
+}
+
+enum Role {
+  student
+  teacher
+  admin
+}

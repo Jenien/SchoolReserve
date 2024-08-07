@@ -1,0 +1,212 @@
+
+### get rooms
+
+GET http://localhost:3000/api/v1/rent/room
+
+### Create new room
+POST http://localhost:3000/api/v1/rent/addroom
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "name":"Ruang K",
+  "capacity":"60"
+}
+
+#######Test dari sini yang surya buat##############
+
+### Get all users
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwicm9sZSI6IkFETUlOIiwibmlwIjoiMTIzNDU2NzgiLCJpYXQiOjE3MjEyMTExMzQsImV4cCI6MTcyMTI5NzUzNH0.ZD1O9D2LfWibYJMiD89lf4pLbbDsILz6MLBhVBRkzY0
+
+### Get a user by ID
+GET http://localhost:3000/api/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiamFlbnNpYWRtaW5AZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImplbmkgU2FuZyBBZG1pbiIsInJvbGUiOiJhZG1pbiIsIm5pcCI6IlI4MjMxMjIzRCIsImlhdCI6MTcyMTI5Nzg3MCwiZXhwIjoxNzIxMzg0MjcwfQ.wPqPwK5kaaMz-ox9t41dUFfcuZ4g_OuZnFlMgWnQxFU
+
+### Create a new user (admin)
+POST http://localhost:3000/api/users/register/teacher
+Content-Type: application/json
+
+{
+  "username": "surya2",
+  "email": "suryah2@example.com",
+  "nip": "333033",
+  "password": "password123"
+}
+
+### Create a new user (guru)
+POST http://localhost:3000/api/users/register/admin
+Content-Type: application/json
+
+{
+  "username": "jeni",
+  "email": "jaensiy@example.com",
+  "nip": "1231223",
+  "password": "password123"
+}
+
+### Create a new user (students)
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "asep",
+  "email": "asep@example.com",
+  "nip": "321321",
+  "password": "password123"
+}
+
+### Login a user can use email, username or nip
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+
+  "nip": "1231223",
+  "password": "password123"
+}
+
+
+
+### Update a user
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoic3VyeWEyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJzdXJ5YTIiLCJyb2xlIjoiQURNSU4iLCJuaXAiOiIzMzMzMzMiLCJpYXQiOjE3MjEyMjI3MjcsImV4cCI6MTcyMTMwOTEyN30.eSyQZ3SwmunMlBbps6e3xFTgaJvK5P3Z8dpFgiKh6zQ
+
+{
+  "username": "surya",
+  "email": "surya@example.com",
+  "nip": "12345678",
+  "password": "password123",
+  "role": "admin"
+}
+
+### Soft delete a user
+DELETE http://localhost:3000/api/users/1
+Authorization: Bearer 
+
+### Get all rooms
+GET http://localhost:3000/api/rooms
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTIzODY0MywiZXhwIjoxNzIxMzI1MDQzfQ.hUR0ypjvFMHsPflSK_7b-lQyQFuFuPHR1llasdq25KE
+### Get a room by ID
+GET http://localhost:3000/api/rooms/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiamFlbnNpYWRtaW5AZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImplbmkgU2FuZyBBZG1pbiIsInJvbGUiOiJhZG1pbiIsIm5pcCI6IlI4MjMxMjIzRCIsImlhdCI6MTcyMTI5ODk4MCwiZXhwIjoxNzIxMzg1MzgwfQ.5FUhuyR_y3d-SjElC85hLgciZyBH4XdswRbra9G1w00
+
+### Create a new room
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiamFlbnNpYWRtaW5AZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImplbmkgU2FuZyBBZG1pbiIsInJvbGUiOiJhZG1pbiIsIm5pcCI6IlI4MjMxMjIzRCIsImlhdCI6MTcyMTI5ODk4MCwiZXhwIjoxNzIxMzg1MzgwfQ.5FUhuyR_y3d-SjElC85hLgciZyBH4XdswRbra9G1w00
+
+{
+  "name": "Room Renang",
+  "capacity": 15
+}
+### Create a new room (without role admin)
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTIzODY0MywiZXhwIjoxNzIxMzI1MDQzfQ.hUR0ypjvFMHsPflSK_7b-lQyQFuFuPHR1llasdq25KE
+
+{
+  "name": "Room Biology",
+  "capacity": 15
+}
+
+### Update a room
+PUT http://localhost:3000/api/rooms/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTIzODY0MywiZXhwIjoxNzIxMzI1MDQzfQ.hUR0ypjvFMHsPflSK_7b-lQyQFuFuPHR1llasdq25KE
+
+{
+  "name": "Ruang nyaman",
+  "capacity": 25
+}
+
+### Soft delete a room
+DELETE http://localhost:3000/api/rooms/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTIzODY0MywiZXhwIjoxNzIxMzI1MDQzfQ.hUR0ypjvFMHsPflSK_7b-lQyQFuFuPHR1llasdq25KE
+
+### Rent a room
+POST http://localhost:3000/api/rooms/rent/start/4
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiamFlbnNpYWRtaW5AZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImplbmkgU2FuZyBBZG1pbiIsInJvbGUiOiJhZG1pbiIsIm5pcCI6IlI4MjMxMjIzRCIsImlhdCI6MTcyMTI5ODk4MCwiZXhwIjoxNzIxMzg1MzgwfQ.5FUhuyR_y3d-SjElC85hLgciZyBH4XdswRbra9G1w00
+
+{
+  "userId": 7,
+  "notes": "Meeting room rental",
+  "capacity": 15,
+  "condition": "GOOD"
+}
+
+### Return a rented room
+POST http://localhost:3000/api/rooms/rent/end/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImVtYWlsIjoiYXNlcEBleGFtcGxlLmNvbSIsInVzZXJuYW1lIjoiYXNlcCIsInJvbGUiOiJzdHVkZW50IiwibmlwIjoiMzIxMzIxIiwiaWF0IjoxNzIxMjM5Mjk1LCJleHAiOjE3MjEzMjU2OTV9.nEPcxRTfKQNf4IxX0p6K5f87_FlsjwGE3NqcTi7q__g
+
+{
+  "userId": 7,
+  "notes": "test2 Meeting room rental",
+  "condition": "GOOD"
+}
+
+### Get all inventories
+GET http://localhost:3000/api/inventories
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTI2OTI0NCwiZXhwIjoxNzIxMzU1NjQ0fQ.2qzRWJPUDhq73WAJw3Y_QJT_cMZcwqTEQGMfVbJckUo
+
+### Get an inventory by ID
+GET http://localhost:3000/api/inventories/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwicm9sZSI6IkFETUlOIiwibmlwIjoiMTIzNDU2NzgiLCJpYXQiOjE3MjEyMTI0OTMsImV4cCI6MTcyMTI5ODg5M30.-ud8hI4wwK5a014F7Uo9poP375067Nu8RdW762JZ07w
+
+### Create a new inventory
+POST http://localhost:3000/api/inventories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTI2OTI0NCwiZXhwIjoxNzIxMzU1NjQ0fQ.2qzRWJPUDhq73WAJw3Y_QJT_cMZcwqTEQGMfVbJckUo
+
+{
+  "name": "Speaker",
+  "location": "Room A",
+  "initialQuantity": 3,
+  "condition": "New"
+}
+
+### Update an inventory
+PUT http://localhost:3000/api/inventories/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTI2OTI0NCwiZXhwIjoxNzIxMzU1NjQ0fQ.2qzRWJPUDhq73WAJw3Y_QJT_cMZcwqTEQGMfVbJckUo
+
+
+{
+  "name": "Laptop Updated",
+  "location": "Room B",
+  "initialQuantity": 8,
+  "condition": "Good"
+}
+
+### Soft delete an inventory
+DELETE http://localhost:3000/inventories/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwicm9sZSI6IkFETUlOIiwibmlwIjoiMTIzNDU2NzgiLCJpYXQiOjE3MjEyMTI0OTMsImV4cCI6MTcyMTI5ODg5M30.-ud8hI4wwK5a014F7Uo9poP375067Nu8RdW762JZ07w
+
+### Rent an inventory
+POST http://localhost:3000/api/inventories/rent/start/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTI2OTI0NCwiZXhwIjoxNzIxMzU1NjQ0fQ.2qzRWJPUDhq73WAJw3Y_QJT_cMZcwqTEQGMfVbJckUo
+
+{
+  "userId": 4,
+  "quantity": 1,
+  "condition": "New",
+  "notes": "speakerrental"
+}
+
+### Return rented inventory
+POST http://localhost:3000/api/inventories/rent/end/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiamVuc2l5QGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJqZW5pIiwicm9sZSI6ImFkbWluIiwibmlwIjoiMTIzMTIyMyIsImlhdCI6MTcyMTI2OTI0NCwiZXhwIjoxNzIxMzU1NjQ0fQ.2qzRWJPUDhq73WAJw3Y_QJT_cMZcwqTEQGMfVbJckUo
+
+
+{
+  "userId": 4,
+  "quantity": 1,
+  "condition": "Good",
+  "notes": "Returned in good condition"
+}
+
