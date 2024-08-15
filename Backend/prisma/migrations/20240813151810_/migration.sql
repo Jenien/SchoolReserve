@@ -48,11 +48,16 @@ CREATE TABLE "RoomRent" (
 -- CreateTable
 CREATE TABLE "Inventory" (
     "id" SERIAL NOT NULL,
+    "itemCode" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "location" TEXT NOT NULL,
     "initialQuantity" INTEGER NOT NULL DEFAULT 0,
     "rentedQuantity" INTEGER NOT NULL DEFAULT 0,
     "condition" TEXT NOT NULL,
+    "category" TEXT,
+    "supplier" TEXT,
+    "purchasePrice" DOUBLE PRECISION,
+    "purchaseDate" TIMESTAMP(3),
     "deletedAt" TIMESTAMP(3),
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
@@ -81,6 +86,9 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_nip_key" ON "User"("nip");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Inventory_itemCode_key" ON "Inventory"("itemCode");
 
 -- AddForeignKey
 ALTER TABLE "RoomRent" ADD CONSTRAINT "RoomRent_RoomId_fkey" FOREIGN KEY ("RoomId") REFERENCES "Room"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
