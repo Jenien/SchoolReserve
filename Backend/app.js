@@ -24,6 +24,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/rooms',authenticateToken, roomRoutes);
 app.use('/api/inventories',authenticateToken, inventoryRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
