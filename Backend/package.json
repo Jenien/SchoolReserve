@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "prisma generate && next build",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "migrate": "yarn prisma migrate dev",
-    "seed": "node prisma/seed.js",
-    "postinstall": "yarn migrate && yarn seed"
+    "migrate": "yarn prisma migrate dev"
   },
   "license": "MIT",
   "dependencies": {
